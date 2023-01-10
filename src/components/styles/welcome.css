@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap');
+.welcome__container{
+    height: calc(100vh - 2cm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: #0f2862;
+    background-color: #fff;
+}
+.welcome__greetings{
+    font-size: 32px;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+}
+.welcome__secondary{
+    font-size: 30px;
+    text-align: center;
+    margin: 0.75cm 25px;
+    word-wrap: break-word;
+    
+}
+.showcase{
+    position: relative;
+    z-index: -1;
+}
+.showcase video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2;
+    left: 2;
+    object-fit: cover;
+    z-index: -1;
+}
+.showcase h2{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    font-size: 77px;
+    color: #0f2862;
+    mix-blend-mode: screen;
+    text-align: center;
+    z-index: -1;
+}
+button{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #0f2862;
+}
+.welcome__icons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 0.75cm auto;
+}
+
+@media screen and (max-width:550px){
+    .showcase h2{
+        font-size: 61px;
+    }
+    .welcome__greetings{
+        font-size: 24px;
+
+    }
+    .welcome__secondary{
+        font-size: 18px;
+    }
+}

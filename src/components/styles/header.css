@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+.header__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(0deg, rgb(0,0,1) 0%,  #0f2862 100%);
+    color: white;
+    height: 2cm;
+    font-size: 1.2rem;
+    font-family: 'Comfortaa', cursive;
+}
+.header__right{
+    flex-basis: 40%;
+    margin-left: auto;
+}
+.header__left{
+    flex-basis: 10%;
+    margin-left: 1cm;
+    z-index: 9;
+}
+.header__right ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header__right>ul{
+    list-style-type: none;
+}
+.header__right a{
+    color: white;
+    text-decoration: none;
+}
+.header_right a:visited, .header_right a:focus{
+    color: white;
+}
+/* ************** */
+/* MEDIA QUERIES */
+/* ************ */
+@media only screen and (max-width: 880px){
+    .header__right ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #000b32;
+        width: 100%;
+        height: 50%;
+        transition: all 0.4s;
+        transform: translateY(-150%);
+    }
+    .header__toggle{
+        position: absolute;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+
+    }
+    .bar{
+        position: relative;
+        height: 2px;
+        width: 30px;
+        background-color: #FFF;
+        transition: all 0.4s ease-in-out;
+    }
+    .bar::before, .bar::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        border-radius: 5px;
+        background-color: #FFF;
+        transition: all 0.4s ease-in-out;
+    }
+    .bar::before{
+        width: 30px;
+        transform: translateY(-8px);
+        right: 0;
+    }
+    .bar::after{
+        width: 30px;
+        transform: translateY(8px);
+    }
+    .header__right.open ul{
+        transform: translateX(0);
+        z-index: 9;
+    }
+    .header__left img{
+        width: 80px;
+    }
+    .header__toggle.open > .bar{
+        transform: translateX(-35px);
+        background: transparent;
+    }
+    .header__toggle.open > .bar::before{
+        width: 32px;
+        transform: rotate(45deg) translate(25px, -25px);
+    }
+    .header__toggle.open > .bar::after{
+        width: 32px;
+        transform: rotate(-45deg) translate(25px, 25px);
+    }
+}

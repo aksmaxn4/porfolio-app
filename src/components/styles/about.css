@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+
+.about__container{
+    background-image: url(../../backgrounds-and-utils/about_background_darker.png);
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  background-size: cover;
+}
+.about__intro{
+  font-size: 34px;
+  line-height: 2;
+  text-align: center;
+  margin: 1.5cm 1cm 1cm 1cm;
+}
+.about__intro span{
+  font-family: 'Neucha', cursive;
+  color: #885E22;;
+  font-size: 38px;
+}
+.about__main{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin-bottom: 2cm;
+  
+}
+
+.about__image{
+  align-self: center;
+}
+
+.about__image img{
+  width: 450px;
+  border-radius: 7px;
+}
+.about__paragrahs{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+.about__paragrahs h2{
+  margin: auto;
+  padding: 0;
+  color: beige;
+  
+}
+.about__p{
+  font-size: 22px;
+  margin: 0.5cm 0;
+  text-align: center;
+}
+.about__p a{
+  text-decoration: none;
+  color: #885E22;
+  font-weight: 600;
+}
+
+
+
+@keyframes pulse {
+  0%{
+    transform: scale(1.05);
+  }
+  25%{
+    transform: scale(0.95);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  75%{
+    transform: scale(0.95);
+  }
+  100%{
+    transform: scale(1.05);
+  }
+}
+
+/* TICKER SETTINGS */
+
+.about__stack{
+  max-width: 80%;
+  margin:1cm auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+}
+.about__stack>span{
+  font-size: 28px;
+  align-self: center;
+  margin-bottom: 0.5cm;
+}
+.about__stack div{
+  width: 200%;
+  display: flex;
+  animation: ticker 15s infinite linear;
+}
+.about__ticker{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.about__stack:hover div{
+  animation-play-state: paused;
+}
+
+.about__ticker img{
+  width: 8%;
+}
+
+@keyframes ticker{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px){
+  .about__image img{
+    width: 350px;
+  }
+  .about__p{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .about__intro{
+    font-size: 24px;
+  }
+  .about__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .about__image{
+    order: -1;
+    margin-bottom: 0.5cm;
+  }
+  .about__stack>span{
+    font-size: 20px;
+  }
+  .about__paragrahs{
+    display: flex;
+    justify-content: center;
+  }
+  .about__p{
+    font-size: 18px;
+    margin: 20px;
+  }
+  .about__ticker img{
+    width: 10%;
+  }
+}
